@@ -1,0 +1,32 @@
+1- db.data.find({marks:{$in:[1,2,3]}})
+
+
+2- db.data.find({marks:{$all:[1,2]}})
+
+
+3- db.data.find({native:"Japan",age:20})
+
+
+4- db.data.find({$or:[{native:"India"},{gender:"Female"}]})
+
+
+5- db.data.updateOne({age:21},{$set:{name:"shivam"}})
+
+
+6- db.data.updateMany({},{$rename:{native:"country"}})
+
+7- db.data.updateOne({name:"john"},{$push:{marks:9}})
+   db.data.updateOne({name:"john"},{$pop:{marks:-1}})
+   db.data.updateOne({name:"john"},{$pop:{marks:1}})
+
+
+8- db.data.updateOne({name:"john"},{$min:{age:20}})
+   db.data.updateOne({name:"john"},{$max:{age:60}})
+
+
+9- db.data.updateOne({name:"john"},{$unset:{age:""}})
+
+8- db.data.updateOne({name:"john"},{$min:{age:20}})
+   db.data.updateOne({name:"john"},{$max:{age:60}})
+
+9- db.data.updateOne({name:"john"},{$unset:{age:""}})

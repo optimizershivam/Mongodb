@@ -1,0 +1,11 @@
+Mongodb Assignment
+
+1.  db.data.find({"gender":"Male"})                                                      //  All users whose gender is male
+2.    db.data.find({"id":{$mod:[2,0]}})                                                 //all users whose ID is even
+3. db.data.find({native:"Japan"})                                                        // Users who currently live in Japan
+4.db.data.find({gender:"Female",native:"India"})                        //Users who are female and live in India
+5 db.data.find({age:{$gt:25}})                                                             //  Users who are more than 25 years old
+6 db.data.find({age:{$lt:50},native:"United States"})                  //Users who are less than 50 years old and live in United State
+7     db.data.find({relocate_to:"France"}).count()                //Total number of users who want to relocate to France (count only)
+8  db.data.find({relocate_to:"Russia",native:"United States"}).sort({age:1})    //Total number of users who are from USA and                                                                                                                                                             want to relocate to russia, sort them by age in                                                                                                                                                                  ascending order
+9 db.data.find().sort({family_members:1,age:-1})                           // get all users, sort them by total number of family member                                                                                                                                 ASC and age  DESC order
